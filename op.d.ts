@@ -3,7 +3,7 @@
  * @template E 元素
  * @template N 重复次数
  */
-type RepeatArray<E, N extends number, Array extends unknown[] = []> = 
+export type RepeatArray<E, N extends number, Array extends unknown[] = []> = 
   N extends Array['length']
     ? Array
     : RepeatArray<E, N, [...Array, E]>;
